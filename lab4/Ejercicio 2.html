@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Suma con Tiempo</title>
+</head>
+<body>
+
+<script>
+  // Generamos dos numeros aleatorios entre 1 y 100
+  const num1 = Math.floor(Math.random() * 100) + 1;
+  const num2 = Math.floor(Math.random() * 100) + 1;
+
+  // Guardamos el tiempo en que se muestra la pregunta
+  const tiempoInicio = Date.now();
+
+  // Preguntamos al usuario la suma de los dos numeros
+  const respuestaUsuario = prompt(`¿Cuánto es ${num1} + ${num2}?`);
+
+  // Guardamos el tiempo en que el usuario respondio
+  const tiempoFin = Date.now();
+
+  // Calculamos cuanto tardo el usuario en responder (en segundos)
+  const tiempoTotal = ((tiempoFin - tiempoInicio) / 1000).toFixed(2);
+
+  // Convertimos la respuesta del usuario a numero
+  const sumaUsuario = parseInt(respuestaUsuario);
+
+  // Calculamos la respuesta correcta
+  const sumaCorrecta = num1 + num2;
+
+  // Mostramos el resultado
+  if (sumaUsuario === sumaCorrecta) { // si la suma dada es igual a la correcta
+    document.write("<p><strong>Correcto!</strong></p>");
+  } else { // si no
+    document.write(`<p><strong>Incorrecto.</strong> La respuesta correcta era ${sumaCorrecta}.</p>`);
+  }
+
+  // Mostramos el tiempo que tardo el usuario
+  document.write(`<p>⏱️ Tiempo de respuesta: ${tiempoTotal} segundos.</p>`);
+</script>
+
+</body>
+</html>

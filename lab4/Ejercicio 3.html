@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Contador de Numeros</title>
+</head>
+<body>
+
+<h2>Resultado del contador de numeros</h2>
+<div id="resultado"></div>
+
+<script>
+  /**
+   * Funcion que cuenta cuantos numeros negativos, ceros y positivos hay en el arreglo
+   */
+
+  function contador(arreglo) {
+    let negativos = 0;
+    let ceros = 0;
+    let positivos = 0;
+
+    // Recorremos cada número del arreglo
+    for (let i = 0; i < arreglo.length; i++) {
+      const num = arreglo[i];
+
+      if (num < 0) { // si el numero es menor a cero
+        negativos++; // aumenta el contador de negativos
+      } else if (num === 0) { // si el numero es igual a cero
+        ceros++; // aumenta el contador de ceros
+      } else { // si no es menor a cero o cero
+        positivos++; // aumentan los positivos
+      }
+    }
+
+    // retornamos los contadores finales como un objeto
+    return {
+      negativos: negativos,
+      ceros: ceros,
+      positivos: positivos
+    };
+  }
+
+  // arreglo de ejmplo
+  const ejemplo = [-5, 0, 2, -1, 0, 8, 4, -3];
+
+  // variable que guarda el return de la funcion con el arreglo de ejemplo como parametro
+  const resultado = contador(ejemplo);
+
+  // Mostramos el resultado 
+  const div = document.getElementById("resultado");
+  div.innerHTML = `
+    <p> - Números negativos: ${resultado.negativos}</p>
+    <p> 0 Ceros: ${resultado.ceros}</p>
+    <p> + Números positivos: ${resultado.positivos}</p>
+  `;
+</script>
+
+</body>
+</html>

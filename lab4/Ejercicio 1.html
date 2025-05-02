@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Tabla de Potencias</title>
+</head>
+<body>
+
+<script>
+  // Pedimos al usuario un numero entero positivo
+  const numero = parseInt(prompt("Ingresa un numero:"));
+
+  // Validamos que sea un numero valido
+  if (isNaN(numero) || numero <= 0) {
+    document.write("Por favor, ingresa un numero positivo valido.");
+  } else {
+    // Creamos la cabecera de la tabla
+    document.write("<h2>Tabla del 1 al " + numero + " con Cuadrados y Cubos</h2>");
+    document.write("<table border='1' cellpadding='8'>");
+    document.write("<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>");
+
+    // Recorremos del 1 hasta el numero ingresado por el usuario
+    for (let i = 1; i <= numero; i++) {
+      const cuadrado = i ** 2; // i elevado a la 2
+      const cubo = i ** 3;     // i elevado a la 3
+      // Escribimos una fila por cada numero con sus potencias
+      document.write(`<tr><td>${i}</td><td>${cuadrado}</td><td>${cubo}</td></tr>`);
+    }
+
+    // Cerramos la tabla
+    document.write("</table>");
+  }
+</script>
+
+</body>
+</html>

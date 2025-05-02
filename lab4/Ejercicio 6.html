@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6 - Objeto Estudiante</title>
+</head>
+<body>
+
+<h2>Informacion del estudiante</h2>
+<div id="infoEstudiante"></div> <!-- div del contenedor de la informacion del estudiante -->
+
+<script>
+  /*
+   * Creamos un objeto llamado estudiante con propiedades
+   */
+  const estudiante = {
+    nombre: "Cesar Augusto Ramirez Davila", // nombre 
+    matricula: "A01712439", // matricula
+    carrera: "Ingenieria en Tecnologias Computacionales", // carrera
+
+    /*
+     * Metodo que imprime los datos del estudiante dentro de un contenedor en el HTML
+     */
+    mostrar: function() {
+      // Obtenemos el div donde vamos a insertar el contenido
+      const contenedor = document.getElementById("infoEstudiante");
+
+      // Insertamos HTML con los datos del estudiante para mostrar los datos del estudiante
+      contenedor.innerHTML = `
+        <ul>
+          <li><strong>Nombre:</strong> ${this.nombre}</li>
+          <li><strong>Matrícula:</strong> ${this.matricula}</li>
+          <li><strong>Carrera:</strong> ${this.carrera}</li>
+        </ul>
+      `;
+    }
+  };
+
+  // Llamamos al metodo del objeto para mostrar la información
+  estudiante.mostrar();
+</script>
+
+</body>
+</html>

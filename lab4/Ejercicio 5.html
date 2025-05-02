@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5 - Numero Invertido </title>
+</head>
+<body>
+
+<h2>Inversion de numero</h2>
+<div id="resultado"></div>
+
+<script>
+  /**
+   * Funcion que invierte los digitos de un numero
+   */
+  function inverso(numero) {
+    // Convertimos el numero a un string, lo separamos en caracteres, lo invertimos y lo unimos de nuevo
+    const numeroInvertidoStr = numero.toString().split("").reverse().join("");
+    
+    // Convertimos el resultado de nuevo a numero
+    return parseInt(numeroInvertidoStr);
+  }
+
+  // Pedimos al usuario que ingrese un numero
+  const entrada = prompt("Ingresa un numero:");
+  const numeroOriginal = parseInt(entrada);
+
+  // Validacion si el numero ingresado es valido
+  if (isNaN(numeroOriginal)) {
+    document.getElementById("resultado").innerHTML = "Por favor, ingresa un numero real.";
+  } else {
+    // Variable resultado que guarda el return de la funcion
+    const resultado = inverso(numeroOriginal);
+    // Mostrar el numero original y el numero invertido
+    document.getElementById("resultado").innerHTML = `
+      <p>Número original: ${numeroOriginal}</p>
+      <p>Número invertido: ${resultado}</p>
+    `;
+  }
+</script>
+
+</body>
+</html>

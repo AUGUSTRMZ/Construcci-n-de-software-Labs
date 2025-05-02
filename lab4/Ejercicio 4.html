@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 - Promedios de Filas</title>
+</head>
+<body>
+
+<h2>Promedios por fila</h2>
+<div id="resultado"></div>
+
+<script>
+  /**
+   * Funcion que calcula los promedios de cada fila en una matriz.
+   */
+  function promedios(matriz) {
+    const resultado = [];
+
+    // Ciclo for que recorre cada fila de la matriz
+    for (let i = 0; i < matriz.length; i++) {
+      const fila = matriz[i];
+      let suma = 0;
+
+      // Sumamos los elementos de la fila
+      for (let j = 0; j < fila.length; j++) {
+        suma += fila[j];
+      }
+
+      // Calculamos el promedio y lo agregamos al resultado
+      const promedio = suma / fila.length;
+      resultado.push(promedio);
+    }
+
+    return resultado;
+  }
+
+  // Matriz de ejemplo
+  const matrizEjemplo = [
+    [5, 8, 10],
+    [2, 4, 6, 8],
+    [1, 1, 1, 1]
+  ];
+
+  // Obtiene los promedios
+  const resultado = promedios(matrizEjemplo);
+
+  // Muestra los resultados
+  const div = document.getElementById("resultado");
+  div.innerHTML = "<ul>";
+  for (let i = 0; i < resultado.length; i++) {
+    div.innerHTML += `<li>Fila ${i + 1}: promedio = ${resultado[i].toFixed(2)}</li>`;
+  }
+  div.innerHTML += "</ul>";
+</script>
+
+</body>
+</html>
