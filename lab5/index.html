@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicacion con Bulma</title>
+
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  
+  <!-- Tu hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+
+      <!-- TÍTULO PRINCIPAL -->
+      <div class="box has-background-dark has-text-white">
+        <div class="media">
+          <div class="media-left">
+            <span class="icon is-large">
+              <i class="fas fa-comments fa-2x"></i>
+            </span>
+          </div>
+          <div class="media-content">
+            <h1 class="title is-4">Preguntas a responder</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA INTERACTIVA 1 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="toggle-container">
+            <input type="checkbox" id="pregunta1" class="toggle-input">
+            <label for="pregunta1" class="toggle-label">
+              ¿Qué es Material Design?
+            </label>
+            <div class="respuesta">
+              Material Design es un sistema de diseño desarrollado por Google que proporciona directrices visuales y de interacción para crear interfaces modernas, coherentes y accesibles en plataformas web, móviles y de escritorio.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA INTERACTIVA 2 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="toggle-container">
+            <input type="checkbox" id="pregunta2" class="toggle-input">
+            <label for="pregunta2" class="toggle-label">
+              ¿Cuáles son los principios de Material Design?
+            </label>
+            <div class="respuesta">
+              Los principios son: el uso de metáforas visuales inspiradas en el mundo físico (como el papel), la intención significativa del movimiento y el diseño adaptable que responde a cualquier tamaño de pantalla.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@import "../node_modules/bulma/css/bulma.css";
+
+.card { /* aplica los estilos a las tarjetas */
+  cursor: pointer; /* hacer que el cursor indique que es clickeable al cambiar a una mano */
+  transition: all 0.3s ease; /* animacion  cuando cambien las propiedade */
+  margin-bottom: 1rem; /* espacio debajo de la tarjeta para que no este pegada a la siguiente */
+}
+
+.card:hover { /* estilo para cuando el mouse este encima de la tarjeta */
+  box-shadow: 0 0 15px rgba(0,0,0,0.15); /* agrega una sombra ligera cuando el mouse se posa encima de la tarjeta */
+}
+
+  /* estilo para coultar la respuesta */
+.toggle-container { /*contenedor principal que agrupa la pregunta y respuesta*/
+  display: flex; /* flexbox */
+  flex-direction: column; /* hace que los elementos se apilen de forma vertical */
+}
+
+.toggle-input { /*interruptor*/
+  display:none; /*oculta completamente el imput para que no se vea*/
+}
+
+.toggle-label{ /*texto de la pregunta conectada con el checkbox*/
+  padding: 1rem; /*espacio interior*/
+  background-color: #43484e;/*color de fondo*/
+  border-radius: 6px; /*bordes redondeados*/
+  font-weight: 600;/*grosor del texto*/
+  border: 1px solid white; /*borde suave de una tonalidad mas oscura*/
+  transition: background 0.3s ease; /*cuando el cursor pase hace una transicion de color suave*/
+}
+
+.toggle-label:hover{ /*aplica el cambio de fondo al pasar el cursor haciendose mas claro*/
+  background-color: #8d8d8d;
+}
+
+.toggle-input:checked + .toggle-label + .respuesta {
+  display:block;
+}
+
+/*
+checked: aplica este estilo solo si el checkbox esta marcado
++ toggle-label + respuesta: respuesat debe mostrarse despues de toggle label
+display: block cambia el display de none a block, hacienod que la respeusta sea visible
+*/
+
+.respuesta{
+  display:none;
+  margin-top: 0.75rem;
+  padding:1rem;
+  background-color: #43484e;
+  border:1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: white;
+}
+
+/*
+respuesta: la caja que tiene el texto de la respuesta
+display none, oculta por defecto
+margin top: separacion entre la pregunta y la respeusta
+padding espacio interno para que el texto respire
+background color fondo blanco
+border borde de otro color gris
+border radius, bordes redondeados
+font size, tamaño de la fuente
+color, color de la fuente
+*/
+
