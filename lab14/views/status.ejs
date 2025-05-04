@@ -1,0 +1,9 @@
+<%- include('includes/head.ejs') %>
+
+<h2>Estado de la sesion</h2>
+<p>Usuario: <%= usuario %></p>
+<p>Sesión activa: <%= login ? 'Sí' : 'No' %></p>
+
+<a href="/logout">Cerrar sesion</a>
+
+<%- include('includes/footer.ejs') %>

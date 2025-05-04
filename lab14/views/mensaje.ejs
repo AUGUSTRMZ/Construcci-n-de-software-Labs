@@ -1,0 +1,12 @@
+<%- include('includes/head.ejs') %>
+
+<h2>Mensaje flash</h2>
+<% if (mensaje.length > 0) { %>
+  <p><%= mensaje[0] %></p>
+<% } else { %>
+  <p>No hay mensajes.</p>
+<% } %>
+
+<a href="/enviar-mensaje">Enviar mensaje flash</a>
+
+<%- include('includes/footer.ejs') %>
