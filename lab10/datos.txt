@@ -1,0 +1,6 @@
+Nombre: Cesar 
+Mensaje: Este es un mensaje que se guarda
+
+Nombre: pepito Perez
+Mensaje: hola
+
