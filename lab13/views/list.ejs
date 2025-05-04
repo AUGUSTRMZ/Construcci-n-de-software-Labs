@@ -1,0 +1,12 @@
+<%- include('includes/head.ejs') %>
+
+<h1>Comentarios</h1>
+<ul>
+  <% for (let c of comentarios) { %>
+    <li><strong><%= c.nombre %></strong>: <%= c.mensaje %></li>
+  <% } %>
+</ul>
+
+<a href="/">Volver al formulario</a>
+
+<%- include('includes/footer.ejs') %>
