@@ -1,0 +1,11 @@
+<h1><%= titulo %></h1>
+<a href="/add">Agregar nueva persona</a>
+
+<ul>
+  <% for (let p of personas) { %>
+    <li>
+      <strong><%= p.nombre %></strong> – <%= p.edad %> años |
+      <a href="/edit/<%= p.id %>">Editar</a>
+    </li>
+  <% } %>
+</ul>

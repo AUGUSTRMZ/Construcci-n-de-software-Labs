@@ -1,0 +1,12 @@
+<h1><%= titulo %></h1>
+
+<form action="<%= persona ? '/edit' : '/add' %>" method="POST">
+  <% if (persona) { %>
+    <input type="hidden" name="id" value="<%= persona.id %>">
+  <% } %>
+  <input type="text" name="nombre" placeholder="Nombre" value="<%= persona?.nombre || '' %>" required>
+  <input type="number" name="edad" placeholder="Edad" value="<%= persona?.edad || '' %>" required>
+  <button type="submit"><%= persona ? 'Actualizar' : 'Guardar' %></button>
+</form>
+
+<a href="/">Volver a la lista</a>
