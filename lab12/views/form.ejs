@@ -1,0 +1,10 @@
+<%- include('includes/head.ejs') %>
+
+<h2>Formulario</h2>
+<form action="/form/submit" method="POST">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <textarea name="comentario" placeholder="Tu comentario" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
+<%- include('includes/footer.ejs') %>

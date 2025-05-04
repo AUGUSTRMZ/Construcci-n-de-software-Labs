@@ -1,0 +1,17 @@
+<%- include('includes/head.ejs') %>
+
+<h2>Comentarios Recibidos</h2>
+
+<% if (comentarios.length > 0) { %>
+  <ul>
+    <% for (let c of comentarios) { %>
+      <li><strong><%= c.nombre %></strong>: <%= c.comentario %></li>
+    <% } %>
+  </ul>
+<% } else { %>
+  <p>No hay comentarios aún.</p>
+<% } %>
+
+<a href="/">Volver al inicio</a>
+
+<%- include('includes/footer.ejs') %>
