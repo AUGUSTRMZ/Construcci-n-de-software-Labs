@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Bienvenido, <%= user.nombre %></h2>
+    <h3>Roles y privilegios:</h3>
+    <ul>
+        <% user.roles.forEach(r => { %>
+            <li><%= r.descripcion_rol %> → <%= r.accion %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
